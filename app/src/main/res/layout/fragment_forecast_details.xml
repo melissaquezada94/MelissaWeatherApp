@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".presentation.details.ForecastDetailsFragment">
+
+
+    <TextView
+        android:id="@+id/temperatureTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        tools:text="70.31 \u2109"
+        app:layout_constraintBottom_toBottomOf="@+id/iconWeatherImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iconWeatherImage"
+        app:layout_constraintTop_toTopOf="@+id/iconWeatherImage"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <TextView
+        android:id="@+id/weatherMainTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="Rain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feelsLikeTxt" />
+
+    <TextView
+        android:id="@+id/weatherDescriptionTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        tools:text="light rain"
+        app:layout_constraintEnd_toEndOf="@+id/weatherMainTxt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/weatherMainTxt"
+        app:layout_constraintTop_toBottomOf="@+id/weatherMainTxt" />
+
+    <TextView
+        android:id="@+id/feelsLikeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        tools:text="Feels Like: 76.36 \u2109"
+        app:layout_constraintEnd_toEndOf="@+id/temperatureTxt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/temperatureTxt"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureTxt" />
+
+    <ImageView
+        android:id="@+id/iconWeatherImage"
+        android:layout_width="94dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/temperatureTxt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

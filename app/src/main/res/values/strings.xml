@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Weather Lookup Challenge</string>
+
+    <string name="blank_city_message">Please enter the city</string>
+    <string name="city_not_found">City not found</string>
+    <string name="city_name">City name</string>
+    <string name="weather">Weather App</string>
+    <string name="temp">Temp: %.2f \u2109</string>
+    <string name="temp_details">%.2f \u2109</string>
+    <string name="degrees_fahrenheit">\u2109</string>
+    <string name="feels_like">Feels Like: %.2f \u2109</string>
+    <string name="lookup">LOOKUP</string>
+    <string name="url_icon_weather">https://openweathermap.org/img/wn/%s.png</string>
+    <string name="url_icon_weather_2x">https://openweathermap.org/img/wn/%s@2x.png</string>
+</resources>

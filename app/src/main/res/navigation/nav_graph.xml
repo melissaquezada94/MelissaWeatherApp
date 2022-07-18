@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchCityFragment">
+
+    <fragment
+        android:id="@+id/searchCityFragment"
+        android:name="com.example.weatherlookupchallenge.presentation.search.SearchCityFragment"
+        android:label="fragment_search_city"
+        tools:layout="@layout/fragment_search_city" >
+        <action
+            android:id="@+id/action_searchCityFragment_to_cityWeatherListFragment"
+            app:destination="@id/cityWeatherListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cityWeatherListFragment"
+        android:name="com.example.weatherlookupchallenge.presentation.forecast.ForecastsFragment"
+        android:label="fragment_city_weather_list"
+        tools:layout="@layout/fragment_forecasts" >
+        <action
+            android:id="@+id/action_cityWeatherListFragment_to_weatherDetailsFragment"
+            app:destination="@id/weatherDetailsFragment" />
+        <argument
+            android:name="cityForecast"
+            app:argType="com.example.weatherlookupchallenge.domain.models.CityForecast" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="com.example.weatherlookupchallenge.presentation.details.ForecastDetailsFragment"
+        android:label="fragment_weather_details"
+        tools:layout="@layout/fragment_forecast_details" >
+        <argument
+            android:name="forecast"
+            app:argType="com.example.weatherlookupchallenge.domain.models.Forecast" />
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+    </fragment>
+</navigation>
